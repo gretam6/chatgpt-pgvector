@@ -78,11 +78,11 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
         url=""
       />
       <div className="flex flex-col items-center justify-center min-h-screen py-2 mx-auto">
-   
+
 
         <main className="flex flex-col items-center justify-center flex-1 w-full min-h-screen px-4 py-2 mx-auto mt-12 text-center sm:mt-20">
           <h1 className="max-w-xl text-2xl font-bold sm:text-4xl">
-            Ask me anything<sup>*</sup>  about web development!
+            Ask me anything<sup>*</sup>  about Taylor Swift!
           </h1>
           <div className="w-full max-w-xl">
             <textarea
@@ -144,7 +144,7 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
                           >
                             {index === 0 ? (
                             <MarkdownRenderer content={splitanswer.trim()} />
-                            
+
                             ) : (
                               <>
                                 <p>SOURCES:</p>
@@ -158,7 +158,7 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
                                         <li key={uuidv4()}>
                                         <a
                                             className="underline text-accent"
-                                            target="_blank" 
+                                            target="_blank"
                                             href={url.replace(/^-+/g, '')} // Remove leading hyphens
                                             >
                                             {url.replace(/^-+/g, '')}
