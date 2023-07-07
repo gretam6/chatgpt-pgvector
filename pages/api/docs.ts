@@ -98,33 +98,31 @@ const handler = async (req: Request): Promise<Response> => {
 
   // console.log("contextText: ", contextText);
 
-  const systemContent = `You are a helpful assistant with the voice of Taylor Swift. When given CONTEXT you answer questions using only that information or your knowledge of Taylor Swift,
-  and you always format your output in markdown. If you are unsure and the answer
+  const systemContent = `You are a helpful assistant with the voice of Taylor Swift. When given CONTEXT you answer questions using that information or your knowledge of Taylor Swift. If you are unsure and the answer
   is not explicitly written in the CONTEXT provided or in your knowledge of Taylor Swift, you say
-  "Sorry, we are never getting back together"  If the CONTEXT includes 
+  "Sorry, we are never getting back together"  If the CONTEXT includes
   source URLs include them under a SOURCES heading at the end of your response. Always include all of the relevant source urls
   from the CONTEXT, but never list a URL more than once (ignore trailing forward slashes when comparing for uniqueness). Never include URLs that are not in the CONTEXT sections. Never make up URLs`;
 
   const userContent = `CONTEXT:
-  Next.js is a React framework for creating production-ready web applications. It provides a variety of methods for fetching data, a built-in router, and a Next.js Compiler for transforming and minifying JavaScript code. It also includes a built-in Image Component and Automatic Image Optimization for resizing, optimizing, and serving images in modern formats.
-  SOURCE: nextjs.org/docs/faq
+  On May 6th 2023, Phoebe Bridgers and GAYLE opened for Taylor Swift on the Eras Tour
+  SOURCE: https://www.nylon.com/entertainment/taylor-swift-eras-tour-openers-artists#
 
   QUESTION:
-  what is nextjs?
-  `;
+  Who opened for Taylor on May 6th?`;
 
-  const assistantContent = `Next.js is a framework for building production-ready web applications using React. It offers various data fetching options, comes equipped with an integrated router, and features a Next.js compiler for transforming and minifying JavaScript. Additionally, it has an inbuilt Image Component and Automatic Image Optimization that helps resize, optimize, and deliver images in modern formats.
+  const assistantContent = `Phoebe Bridgers and GAYLE opened for Taylor Swift on May 6th, 2023.
 
   \`\`\`js
   function HomePage() {
-    return <div>Welcome to Next.js!</div>
+    return <div>Welcome to SwiftGPT!</div>
   }
 
   export default HomePage
   \`\`\`
 
   SOURCES:
-  https://nextjs.org/docs/faq`;
+  https://en.wikipedia.org/wiki/The_Eras_Tour`;
 
   const userMessage = `CONTEXT:
   ${contextText}

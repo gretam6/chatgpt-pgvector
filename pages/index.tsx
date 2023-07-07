@@ -72,8 +72,8 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
   return (
     <>
       <MetaTags
-        title="Webdev Answerbot"
-        description="Web Developer answer-bot trained on Supabase, Nextjs, React, TailwindCSS."
+        title="SwiftGPT"
+        description="ChatGPT trained on recent Taylor Swift trivia"
         cardImage="/bot/docs-og.png"
         url=""
       />
@@ -90,7 +90,7 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
               onChange={(e) => setUserQ(e.target.value)}
               rows={4}
               className="w-full p-2 my-5 border rounded-md shadow-md bg-neutral border-neutral-focus "
-              placeholder={"e.g. What are edge functions?"}
+              placeholder={"e.g. Who opened for Taylor Swift on June 16th?"}
             />
 
             {!loading && (
