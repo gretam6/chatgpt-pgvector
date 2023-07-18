@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
-import Logo from "./Logo";
 import NavItem from "./NavItem";
 
 const MENU_LIST = [
@@ -10,7 +9,7 @@ const MENU_LIST = [
   { text: "About me", href: "/" },
 ];
 const Navbar = () => {
-  const [navActive, setNavActive] = useState(null);
+  const [navActive, setNavActive] = useState(false);
   const [activeIdx, setActiveIdx] = useState(-1);
 
   return (

@@ -9,8 +9,7 @@ import MetaTags from "@/components/MetaTags";
 import { ReactNode } from "react";
 import { PageMeta } from "../types";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
-import Navbar from '../components/Navbar';
-import styles from "../styles/main.css";
+import NavBar from '../components/NavBar';
 
 
 interface Props {
@@ -79,7 +78,7 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
         cardImage="/bot/docs-og.png"
         url=""
       />
-      <Navbar/>
+      <NavBar/>
       <div className="flex flex-col items-center justify-center min-h-screen py-2 mx-auto">
 
 
