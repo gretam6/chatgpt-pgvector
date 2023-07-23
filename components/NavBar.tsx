@@ -5,8 +5,7 @@ import NavItem from "./NavItem";
 
 const MENU_LIST = [
   { text: "SwiftGPT", href: "/" },
-  { text: "About this site", href: "/" },
-  { text: "About me", href: "/" },
+  { text: "About", href: "about" },
 ];
 const Navbar = () => {
   const [navActive, setNavActive] = useState(false);
